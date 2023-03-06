@@ -66,6 +66,7 @@ func Update(c *gin.Context) {
 
 	c.JSON(http.StatusOK, gin.H{"massage": "Data Berhasil di Update"})
 }
+
 func Delete(c *gin.Context) {
 
 	var product models.Product
@@ -84,5 +85,6 @@ func Delete(c *gin.Context) {
 		c.AbortWithStatusJSON(http.StatusBadRequest, gin.H{"massage": "Gagal Menghapus Product"})
 		return
 	}
+
 	c.JSON(http.StatusOK, gin.H{"massage": "Product Berhasil di Hapus"})
 }
